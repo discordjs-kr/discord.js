@@ -9647,7 +9647,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for unbanning user",
+                            "description": "해당 유저를 차단 해제하는 이유.",
                             "optional": true,
                             "type": [
                                 [
@@ -9748,7 +9748,7 @@
                 },
                 {
                     "name": "cache",
-                    "description": "The roles of this member",
+                    "description": "해당 서버 유저의 역할 모음.",
                     "readonly": true,
                     "type": [
                         [
@@ -9829,7 +9829,7 @@
             "methods": [
                 {
                     "name": "add",
-                    "description": "멤버에게 하나(혹은 그 이상)의 역할을 추가합니다.",
+                    "description": "서버 유저에게 하나(혹은 그 이상)의 역할을 추가합니다.",
                     "params": [
                         {
                             "name": "roleOrRoles",
@@ -9900,11 +9900,11 @@
                 },
                 {
                     "name": "remove",
-                    "description": "멤버에게서 하나(혹은 그 이상)의 역할을 제거합니다.",
+                    "description": "서버 유저에게서 하나(혹은 그 이상)의 역할을 제거합니다.",
                     "params": [
                         {
                             "name": "roleOrRoles",
-                            "description": "The role or roles to remove",
+                            "description": "제거할 역할 또는 역할들.",
                             "type": [
                                 [
                                     [
@@ -9939,7 +9939,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for removing the role(s)",
+                            "description": "역할(들)을 제거하는 이유.",
                             "optional": true,
                             "type": [
                                 [
@@ -9971,7 +9971,7 @@
                 },
                 {
                     "name": "set",
-                    "description": "Sets the roles applied to the member.",
+                    "description": "서버 유저의 모든 역할을 제거하고 원하는 역할만 적용합니다.",
                     "examples": [
                         "// Set the member's roles to a single role\nguildMember.roles.set(['391156570408615936'])\n  .then(console.log)\n  .catch(console.error);",
                         "// Remove all the roles from a member\nguildMember.roles.set([])\n  .then(member => console.log(`Member roles is now of ${member.roles.cache.size} size`))\n  .catch(console.error);"
@@ -9979,7 +9979,7 @@
                     "params": [
                         {
                             "name": "roles",
-                            "description": "The roles or role IDs to apply",
+                            "description": "적용할 역할 또는 역할 ID.",
                             "type": [
                                 [
                                     [
@@ -10009,7 +10009,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for applying the roles",
+                            "description": "역할을 추가하는 이유.",
                             "optional": true,
                             "type": [
                                 [
@@ -10047,7 +10047,7 @@
         },
         {
             "name": "MessageManager",
-            "description": "Manages API methods for Messages and holds their cache.",
+            "description": "메세지에 관한 관리 함수들과 메세지 캐시 데이터를 저장합니다.",
             "extends": [
                 [
                     [
