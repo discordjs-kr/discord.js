@@ -9636,7 +9636,7 @@
                     "params": [
                         {
                             "name": "user",
-                            "description": "The user to unban",
+                            "description": "차단 해제 할 유저.",
                             "type": [
                                 [
                                     [
@@ -10074,7 +10074,7 @@
                 },
                 {
                     "name": "cache",
-                    "description": "The cache of Messages",
+                    "description": "메세지의 모음.",
                     "type": [
                         [
                             [
