@@ -19791,14 +19791,14 @@
                 },
                 {
                     "name": "edit",
-                    "description": "Updates the guild with new information - e.g. a new name.",
+                    "description": "길드를 새로운 정보로 업데이트합니다 - 예시: 이름.",
                     "examples": [
                         "// Set the guild name and region\nguild.edit({\n  name: 'Discord Guild',\n  region: 'london',\n})\n  .then(updated => console.log(`New guild name ${updated} in region ${updated.region}`))\n  .catch(console.error);"
                     ],
                     "params": [
                         {
                             "name": "data",
-                            "description": "The data to update the guild with",
+                            "description": "길드를 업데이트 할 데이터",
                             "type": [
                                 [
                                     [
@@ -19809,7 +19809,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for editing this guild",
+                            "description": "길드를 수정하는 이유",
                             "optional": true,
                             "type": [
                                 [
@@ -19840,11 +19840,11 @@
                 },
                 {
                     "name": "setExplicitContentFilter",
-                    "description": "Edits the level of the explicit content filter.",
+                    "description": "유해 미디어 컨텐츠 필터의 필터링 레벨을 변경합니다.",
                     "params": [
                         {
                             "name": "explicitContentFilter",
-                            "description": "The new level of the explicit content filter",
+                            "description": "유해 미디어 컨텐츠 필터의 새로운 필터링 레벨",
                             "type": [
                                 [
                                     [
@@ -19860,7 +19860,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for changing the level of the guild's explicit content filter",
+                            "description": "길드의 유해 미디어 컨텐츠 필터 레벨을 변경하는 이유",
                             "optional": true,
                             "type": [
                                 [
@@ -19891,11 +19891,11 @@
                 },
                 {
                     "name": "setDefaultMessageNotifications",
-                    "description": "Edits the setting of the default message notifications of the guild.",
+                    "description": "길드의 기본 알림 설정을 변경합니다.",
                     "params": [
                         {
                             "name": "defaultMessageNotifications",
-                            "description": "The new setting for the default message notifications",
+                            "description": "기본 알림 설정의 새로운 설정",
                             "type": [
                                 [
                                     [
@@ -19911,7 +19911,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for changing the setting of the default message notifications",
+                            "description": "기본 알림 설정을 변경하는 이유",
                             "optional": true,
                             "type": [
                                 [
@@ -19988,14 +19988,14 @@
                 },
                 {
                     "name": "setName",
-                    "description": "Edits the name of the guild.",
+                    "description": "길드의 이름을 변경합니다.",
                     "examples": [
                         "// Edit the guild name\nguild.setName('Discord Guild')\n .then(updated => console.log(`Updated guild name to ${guild}`))\n .catch(console.error);"
                     ],
                     "params": [
                         {
                             "name": "name",
-                            "description": "The new name of the guild",
+                            "description": "해당 길드의 새로운 이름",
                             "type": [
                                 [
                                     [
@@ -20006,7 +20006,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for changing the guild's name",
+                            "description": "해당 길드의 이름을 바꾸는 이유",
                             "optional": true,
                             "type": [
                                 [
@@ -20037,14 +20037,14 @@
                 },
                 {
                     "name": "setRegion",
-                    "description": "Edits the region of the guild.",
+                    "description": "길드의 위치를 변경합니다.",
                     "examples": [
-                        "// Edit the guild region\nguild.setRegion('london')\n .then(updated => console.log(`Updated guild region to ${updated.region}`))\n .catch(console.error);"
+                        "// Edit the guild region\nguild.setRegion('south-korea')\n .then(updated => console.log(`Updated guild region to ${updated.region}`))\n .catch(console.error);"
                     ],
                     "params": [
                         {
                             "name": "region",
-                            "description": "The new region of the guild",
+                            "description": "길드의 새로운 위치",
                             "type": [
                                 [
                                     [
@@ -20055,7 +20055,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for changing the guild's region",
+                            "description": "길드의 위치를 바꾸는 이유",
                             "optional": true,
                             "type": [
                                 [
@@ -20086,14 +20086,14 @@
                 },
                 {
                     "name": "setVerificationLevel",
-                    "description": "Edits the verification level of the guild.",
+                    "description": "길드의 보안 수준을 변경합니다.",
                     "examples": [
                         "// Edit the guild verification level\nguild.setVerificationLevel(1)\n .then(updated => console.log(`Updated guild verification level to ${guild.verificationLevel}`))\n .catch(console.error);"
                     ],
                     "params": [
                         {
                             "name": "verificationLevel",
-                            "description": "The new verification level of the guild",
+                            "description": "길드의 새로운 보안 수준 레벨",
                             "type": [
                                 [
                                     [
@@ -20109,7 +20109,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for changing the guild's verification level",
+                            "description": "길드의 보안 수준 레벨을 변경하는 이유",
                             "optional": true,
                             "type": [
                                 [
@@ -20140,14 +20140,14 @@
                 },
                 {
                     "name": "setAFKChannel",
-                    "description": "Edits the AFK channel of the guild.",
+                    "description": "길드의 잠수 채널을 변경.",
                     "examples": [
                         "// Edit the guild AFK channel\nguild.setAFKChannel(channel)\n .then(updated => console.log(`Updated guild AFK channel to ${guild.afkChannel.name}`))\n .catch(console.error);"
                     ],
                     "params": [
                         {
                             "name": "afkChannel",
-                            "description": "The new AFK channel",
+                            "description": "새로운 잠수 채널",
                             "type": [
                                 [
                                     [
@@ -20158,7 +20158,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for changing the guild's AFK channel",
+                            "description": "길드의 잠수 채널을 변경하는 이유",
                             "optional": true,
                             "type": [
                                 [
@@ -20189,14 +20189,14 @@
                 },
                 {
                     "name": "setSystemChannel",
-                    "description": "Edits the system channel of the guild.",
+                    "description": "길드의 시스템 채널을 변경합니다.",
                     "examples": [
                         "// Edit the guild system channel\nguild.setSystemChannel(channel)\n .then(updated => console.log(`Updated guild system channel to ${guild.systemChannel.name}`))\n .catch(console.error);"
                     ],
                     "params": [
                         {
                             "name": "systemChannel",
-                            "description": "The new system channel",
+                            "description": "새로운 시스템 채널",
                             "type": [
                                 [
                                     [
@@ -20207,7 +20207,7 @@
                         },
                         {
                             "name": "reason",
-                            "description": "Reason for changing the guild's system channel",
+                            "description": "길드의 시스템 채널을 변경하는 이유",
                             "optional": true,
                             "type": [
                                 [
@@ -20238,7 +20238,7 @@
                 },
                 {
                     "name": "setAFKTimeout",
-                    "description": "Edits the AFK timeout of the guild.",
+                    "description": "길드의 잠수 시간 제한을 변경합니다.",
                     "examples": [
                         "// Edit the guild AFK channel\nguild.setAFKTimeout(60)\n .then(updated => console.log(`Updated guild AFK timeout to ${guild.afkTimeout}`))\n .catch(console.error);"
                     ],
@@ -20287,14 +20287,14 @@
                 },
                 {
                     "name": "setIcon",
-                    "description": "Sets a new guild icon.",
+                    "description": "길드의 새로운 아이콘을 설정합니다.",
                     "examples": [
                         "// Edit the guild icon\nguild.setIcon('./icon.png')\n .then(updated => console.log('Updated the guild icon'))\n .catch(console.error);"
                     ],
                     "params": [
                         {
                             "name": "icon",
-                            "description": "The new icon of the guild",
+                            "description": "길드의 새로운 서버 아이콘",
                             "type": [
                                 [
                                     [
