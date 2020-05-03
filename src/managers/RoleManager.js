@@ -6,21 +6,21 @@ const Permissions = require('../util/Permissions');
 const { resolveColor } = require('../util/Util');
 
 /**
- * Manages API methods for roles and stores their cache.
+ * 역할의 API 메소드를 관리하고 캐시에 저장합니다.
  * @extends {BaseManager}
  */
 class RoleManager extends BaseManager {
   constructor(guild, iterable) {
     super(guild.client, iterable, Role);
     /**
-     * The guild belonging to this manager
+     * 이 매니저에 귀속된 길드
      * @type {Guild}
      */
     this.guild = guild;
   }
 
   /**
-   * The role cache of this manager
+   * 이 매니저에 귀속된 역할 캐시
    * @type {Collection<Snowflake, Role>}
    * @name RoleManager#cache
    */
@@ -30,19 +30,19 @@ class RoleManager extends BaseManager {
   }
 
   /**
-   * Obtains one or more roles from Discord, or the role cache if they're already available.
-   * @param {Snowflake} [id] ID or IDs of the role(s)
-   * @param {boolean} [cache=true] Whether to cache the new roles objects if it weren't already
+   * 역할을 캐시에 있다면 캐시에서, 캐시에 없다면 디스코드에서 불러옵니다.
+   * @param {Snowflake} [id] 역할 또는 역할들의 ID
+   * @param {boolean} [cache=true] 새로운 역할들의 캐싱 여부
    * @returns {Promise<Role|RoleManager>}
    * @example
-   * // Fetch all roles from the guild
+   * // 길드의 모든 역할을 불러옵니다
    * message.guild.roles.fetch()
-   *   .then(roles => console.log(`There are ${roles.cache.size} roles.`))
+   *   .then(roles => console.log(`이 길드에는 ${roles.cache.size}개의 역할이 있습니다.`))
    *   .catch(console.error);
    * @example
-   * // Fetch a single role
+   * // 한 역할을 불러옵니다
    * message.guild.roles.fetch('222078108977594368')
-   *   .then(role => console.log(`The role color is: ${role.color}`))
+   *   .then(role => console.log(`이 역할의 색깔은 ${role.color}입니다.`))
    *   .catch(console.error);
    */
   async fetch(id, cache = true) {
@@ -58,50 +58,50 @@ class RoleManager extends BaseManager {
   }
 
   /**
-   * Data that can be resolved to a Role object. This can be:
-   * * A Role
-   * * A Snowflake
+   * 역할 객체로 리졸브 가능한 데이터. 가능한 데이터:
+   * * 역할 클래스
+   * * Snowflake
    * @typedef {Role|Snowflake} RoleResolvable
    */
 
   /**
-   * Resolves a RoleResolvable to a Role object.
+   * 역할로 리졸브 가능한 데이터를 역할 객체 데이터로 리졸브합니다.
    * @method resolve
    * @memberof RoleManager
    * @instance
-   * @param {RoleResolvable} role The role resolvable to resolve
+   * @param {RoleResolvable} role 리졸브 할 역할 데이터
    * @returns {?Role}
    */
 
   /**
-   * Resolves a RoleResolvable to a role ID string.
+   * 역할로 리졸브 가능한 데이터를 역할 ID 문자열로 리졸브합니다.
    * @method resolveID
    * @memberof RoleManager
    * @instance
-   * @param {RoleResolvable} role The role resolvable to resolve
+   * @param {RoleResolvable} role 리졸브 할 역할 데이터
    * @returns {?Snowflake}
    */
 
   /**
-   * Creates a new role in the guild with given information.
-   * <warn>The position will silently reset to 1 if an invalid one is provided, or none.</warn>
-   * @param {Object} [options] Options
-   * @param {RoleData} [options.data] The data to create the role with
-   * @param {string} [options.reason] Reason for creating this role
+   * 옵션에 따른 새로운 역할을 생성합니다.
+   * <warn>만약 올바르지 않은 역할 위치 데이터가 옵션으로 받아들여진다면 경고 없이 1로 설정합니다.</warn>
+   * @param {Object} [options] 옵션
+   * @param {RoleData} [options.data] 역할의 데이터
+   * @param {string} [options.reason] 역할을 생성하는 이유
    * @returns {Promise<Role>}
    * @example
-   * // Create a new role
+   * // 새로운 역할을 생성합니다
    * guild.roles.create()
    *   .then(console.log)
    *   .catch(console.error);
    * @example
-   * // Create a new role with data and a reason
+   * // 데이터와 이유로 역할을 생성합니다
    * guild.roles.create({
    *   data: {
-   *     name: 'Super Cool People',
-   *     color: 'BLUE',
+   *     name: '당근을 흔들어주세요',
+   *     color: 'ORANGE',
    *   },
-   *   reason: 'we needed a role for Super Cool People',
+   *   reason: '마감러들을 위한 당근을!',
    * })
    *   .then(console.log)
    *   .catch(console.error);
@@ -124,7 +124,7 @@ class RoleManager extends BaseManager {
   }
 
   /**
-   * The `@everyone` role of the guild
+   * 길드의 `@everyone` 역할
    * @type {Role}
    * @readonly
    */
@@ -133,7 +133,7 @@ class RoleManager extends BaseManager {
   }
 
   /**
-   * The role with the highest position in the cache
+   * 캐시에 있는 가장 높은 역할
    * @type {Role}
    * @readonly
    */

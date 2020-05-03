@@ -4,21 +4,21 @@ const BaseManager = require('./BaseManager');
 const VoiceState = require('../structures/VoiceState');
 
 /**
- * Manages API methods for VoiceStates and stores their cache.
+ * 음성 상태의 API 메소드를 관리하고 캐시에 저장합니다.
  * @extends {BaseManager}
  */
 class VoiceStateManager extends BaseManager {
   constructor(guild, iterable) {
     super(guild.client, iterable, VoiceState);
     /**
-     * The guild this manager belongs to
+     * 이 매니저에 귀속된 길드
      * @type {Guild}
      */
     this.guild = guild;
   }
 
   /**
-   * The cache of this manager
+   * 이 매니저에 귀속된 음성 상태 캐시
    * @type {Collection<Snowflake, VoiceState>}
    * @name VoiceStateManager#cache
    */

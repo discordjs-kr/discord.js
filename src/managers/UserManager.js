@@ -6,7 +6,7 @@ const Message = require('../structures/Message');
 const User = require('../structures/User');
 
 /**
- * Manages API methods for users and stores their cache.
+ * 유저의 API 메소드를 관리하고 캐시에 저장합니다.
  * @extends {BaseManager}
  */
 class UserManager extends BaseManager {
@@ -15,23 +15,23 @@ class UserManager extends BaseManager {
   }
 
   /**
-   * The cache of this manager
+   * 이 매니저에 귀속된 유저 캐시
    * @type {Collection<Snowflake, User>}
    * @name UserManager#cache
    */
 
   /**
-   * Data that resolves to give a User object. This can be:
-   * * A User object
-   * * A Snowflake
-   * * A Message object (resolves to the message author)
-   * * A GuildMember object
+   * 유저 객체로 리졸브 가능한 데이터. 가능한 데이터:
+   * * 유저 객체
+   * * Snowflake
+   * * 메세지 객체 (message.author로 리졸브합니다)
+   * * 서버 유저 객체
    * @typedef {User|Snowflake|Message|GuildMember} UserResolvable
    */
 
   /**
-   * Resolves a UserResolvable to a User object.
-   * @param {UserResolvable} user The UserResolvable to identify
+   * 유저로 리졸브 가능한 데이터를 유저 객체 데이터로 리졸브합니다.
+   * @param {UserResolvable} user 리졸브 할 유저 데이터
    * @returns {?User}
    */
   resolve(user) {
@@ -41,8 +41,8 @@ class UserManager extends BaseManager {
   }
 
   /**
-   * Resolves a UserResolvable to a user ID string.
-   * @param {UserResolvable} user The UserResolvable to identify
+   * 유저로 리졸브 가능한 데이터를 유저 ID 문자열로 리졸브합니다.
+   * @param {UserResolvable} user 리졸브 할 유저 데이터
    * @returns {?Snowflake}
    */
   resolveID(user) {
@@ -52,9 +52,9 @@ class UserManager extends BaseManager {
   }
 
   /**
-   * Obtains a user from Discord, or the user cache if it's already available.
-   * @param {Snowflake} id ID of the user
-   * @param {boolean} [cache=true] Whether to cache the new user object if it isn't already
+   * 유저를 캐시에 있다면 캐시에서, 캐시에 없다면 디스코드에서 불러옵니다.
+   * @param {Snowflake} id 유저 ID
+   * @param {boolean} [cache=true] 새로운 유저의 캐싱 여부
    * @returns {Promise<User>}
    */
   async fetch(id, cache = true) {
